@@ -12,7 +12,7 @@ const style={
 function App() {
  
   return (
-    <Album/>
+    <Todo/>
   );
 }
 
