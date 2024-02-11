@@ -15,6 +15,16 @@ const handleClick=()=>{
   let newArray=[...list,input]
   setList(newArray)
 }
+
+const deleteMe=(index)=>{
+   console.log("delete button called",index)
+
+  let item1= list.slice(0,index);
+  let item2=list.slice(index+1);
+  let newArr=[...item1,...item2]
+  setList(newArr);
+
+}
  
   return (
     <div>
@@ -29,8 +39,8 @@ const handleClick=()=>{
       <h1>{data}</h1>
       <ul class="list-group">
         {
-          list.map(ele=>{
-            return <li class="list-group-item">{ele}</li>
+          list.map((ele,index)=>{
+            return <li class="list-group-item">{ele} <button onClick={()=>deleteMe(index)} className='btn btn-danger'>Delete</button> </li>
           })
 
         }
@@ -41,3 +51,5 @@ const handleClick=()=>{
 }
 
 export default List
+
+

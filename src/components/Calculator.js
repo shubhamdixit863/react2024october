@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const Calculator = () => {
-    const [result,setResult]=useState("");
+    const [result,setResult]=useState(0);
     const [a,setA]=useState("");
     const [b,setB]=useState("");
 
@@ -14,13 +14,13 @@ const Calculator = () => {
         setB(event.target.value);
     }
 
-    const handleClick=()=>{
+    const handleClick=(event)=>{
         setResult(parseFloat(a)+parseFloat(b));
     }
   return (
     <div>
 
-        <input type='text' onChange={handleChangeA}/>
+        <input type='number' onChange={handleChangeA}/>
         <input type='text' onChange={handleChangeB}/>
 
         <button onClick={handleClick}>
