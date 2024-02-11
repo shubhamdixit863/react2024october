@@ -1,9 +1,7 @@
 import React ,{useState} from 'react'
 
 
-document.getElementById("id").addEventListener("change",function(event){
 
-})
 const List = () => {
   const [list,setList]= useState(["An item","A second item","A third item","A fourth item","And a fifth one"])
  const [data,setData]=useState("List Page")
