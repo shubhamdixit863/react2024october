@@ -7,6 +7,8 @@ const C = () => {
     const [colorB,setColorB]=useState('orange');
 
     const changeColor=()=>{
+      setColorA("black");
+      setColorB("brown")
 
     }
   return (
