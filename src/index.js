@@ -9,12 +9,20 @@ import {
 } from "react-router-dom";
 import Todo from './components/Todo/Todo';
 import Edit from './components/Todo/Edit';
+import Gallery from './components/Gallery';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element:  <App />,
+   
   },
+  {
+    path: "/gallery/:id",
+    element:  <Gallery />,
+   
+  },
+  
   {
     path: "",
     children:[
