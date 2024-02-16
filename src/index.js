@@ -8,6 +8,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Todo from './components/Todo/Todo';
+import Edit from './components/Todo/Edit';
 
 const router = createBrowserRouter([
   {
@@ -15,9 +16,21 @@ const router = createBrowserRouter([
     element:  <App />,
   },
   {
-    path: "/todo",
-    element:  <Todo/>,
+    path: "",
+    children:[
+      {
+        path: "todo",
+        element:  <Todo />,
+      },
+
+      {
+        path: "todo/edit/:todoId",
+        element:  <Edit />,
+      },
+
+    ]
   },
+  
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
