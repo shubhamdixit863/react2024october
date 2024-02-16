@@ -13,7 +13,7 @@ const style={
 function App() {
  
   return (
-    <C/>
+    <h1>App Component</h1>
   );
 }
 
