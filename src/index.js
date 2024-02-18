@@ -28,6 +28,10 @@ const router = createBrowserRouter([
     element:  <ConditionRendering/>,
    
   },
+  {
+    path: "/todo/edit/:todoId",
+    element:  <Edit />,
+  },
   
   {
     path: "",
@@ -37,10 +41,7 @@ const router = createBrowserRouter([
         element:  <Todo />,
       },
 
-      {
-        path: "todo/edit/:todoId",
-        element:  <Edit />,
-      },
+     
 
     ]
   },
@@ -58,3 +59,9 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+
+// age >25 ---.Legal for Driving Colored as green
+// age <25 ---Marked as red 
+
+// Age -->Driving Age 
