@@ -4,7 +4,8 @@ import { useNavigate } from "react-router-dom";
 
 
 
-const List = () => {
+const List = ({number}) => {
+
   const [list,setList]= useState(["An item","A second item","A third item","A fourth item","And a fifth one"])
  const [data,setData]=useState("List Page")
  const [input ,setInput]=useState("")

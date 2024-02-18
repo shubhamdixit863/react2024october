@@ -10,6 +10,7 @@ import {
 import Todo from './components/Todo/Todo';
 import Edit from './components/Todo/Edit';
 import Gallery from './components/Gallery';
+import ConditionRendering from './components/ConditionRendering';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,11 @@ const router = createBrowserRouter([
   {
     path: "/gallery/:id",
     element:  <Gallery />,
+   
+  },
+  {
+    path: "/conditional",
+    element:  <ConditionRendering/>,
    
   },
   
