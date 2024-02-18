@@ -11,6 +11,8 @@ import Todo from './components/Todo/Todo';
 import Edit from './components/Todo/Edit';
 import Gallery from './components/Gallery';
 import ConditionRendering from './components/ConditionRendering';
+import ClassBased from './components/Lifecycle/ClassBased';
+import ClassComp from './components/Lifecycle/ClassComp';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +23,12 @@ const router = createBrowserRouter([
   {
     path: "/gallery/:id",
     element:  <Gallery />,
+   
+  },
+
+  {
+    path: "/class",
+    element:  <ClassComp/>,
    
   },
   {
@@ -50,9 +58,9 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+
     <RouterProvider router={router} />
-  </React.StrictMode>
+
 );
 
 // If you want to start measuring performance in your app, pass a function
